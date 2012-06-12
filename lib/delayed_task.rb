@@ -1,6 +1,6 @@
 module DelayedTask
   require 'rake'
-  class PerformableTask < Struct.new(:task, :targs)
+  class PerformableTask < Struct.new(:task_name, :targs)
     def perform
       begin
         task = Rake::Task[task_name]
